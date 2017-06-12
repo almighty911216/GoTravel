@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_cultural_asset_description"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="0dp"
+    android:background="@color/material_blue_grey_900"
+    tools:context="com.example.almig.android.CulturalAssetDescriptionActivity">
+
+    <ImageView
+        android:id="@+id/iv_cultural_asset_description_main_image"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/default_image"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/iv_cultural_asset_description_upper_sub_image">
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/iv_cultural_asset_description_upper_sub_image"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/default_image"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/iv_cultural_asset_description_main_image"
+        app:layout_constraintRight_toRightOf="parent">
+    </ImageView>
+
+    <fragment
+        android:id="@+id/gmap_cultural_asset_description_lower_sub_map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        app:layout_constraintTop_toBottomOf="@+id/iv_cultural_asset_description_upper_sub_image"
+        app:layout_constraintLeft_toRightOf="@+id/iv_cultural_asset_description_main_image"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/iv_cultural_asset_description_main_image"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <com.example.almig.android.font.RobotoTextView
+                android:id="@+id/rtv_cultural_asset_description_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:text="Name Example"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+                app:typeface="robotoLight"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/rtv_cultural_asset_description_name"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <com.example.almig.android.font.RobotoTextView
+                        android:id="@+id/rtv_cultural_asset_description_age"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:gravity="center"
+                        android:text="age example"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp"
+                        app:typeface="robotoRegular"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <com.example.almig.android.font.RobotoTextView
+                        android:id="@+id/rtv_cultural_asset_description_addr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:gravity="center"
+                        android:text="addr example"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp"
+                        app:typeface="robotoRegular"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <com.example.almig.android.font.RobotoTextView
+                        android:id="@+id/rtv_cultural_asset_description_opentime"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:gravity="center"
+                        android:text="오픈시간 example"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp"
+                        app:typeface="robotoRegular"/>
+
+                    <com.example.almig.android.font.RobotoTextView
+                        android:id="@+id/rtv_cultural_asset_description_closetime"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:gravity="center"
+                        android:text="종료시간 example"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp"
+                        app:typeface="robotoRegular"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <com.example.almig.android.font.RobotoTextView
+                        android:id="@+id/rtv_cultural_asset_description_entrance_fee"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:gravity="center"
+                        android:text="입장료 : example 원"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp"
+                        app:typeface="robotoRegular"/>
+
+                    <com.example.almig.android.font.RobotoTextView
+                        android:id="@+id/rtv_cultural_asset_description_parking_fee"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:gravity="center"
+                        android:text="주차료 : example 원"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp"
+                        app:typeface="robotoRegular"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <com.example.almig.android.font.RobotoTextView
+                        android:id="@+id/rtv_cultural_asset_description_summary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:gravity="center"
+                        android:text="설명 example"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp"
+                        app:typeface="robotoRegular"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>

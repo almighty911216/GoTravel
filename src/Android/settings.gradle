@@ -1,1 +1,1 @@
-include ':app', ':StickyListHeaders', ':LvAnims-core', ':LvAnims-core-slh', ':LvAnims-manipulation', ':universal-image-loader-1.9.5', ':picasso-2.5.2', ':androidbootstrap', ':materialtimepicker', ':materialtextfield', ':fabanimation'
+include ':app', ':StickyListHeaders', ':LvAnims-core', ':LvAnims-core-slh', ':LvAnims-manipulation', ':universal-image-loader-1.9.5', ':picasso-2.5.2', ':androidbootstrap', ':materialtimepicker', ':materialtextfield', ':fabanimation', ':imagesliding'
