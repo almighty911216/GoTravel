@@ -210,7 +210,7 @@ public class MainActivity extends AppCompatActivity {
         initAdapter();
         mDrawerList.setAdapter(new DrawerAdapter(this, mDrawerItems));
         mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
-        mDrawerLayout.addDrawerListener(mDrawerToggle);
+        //mDrawerLayout.addDrawerListener(mDrawerToggle);
 
         selectItem(1, DRAWER_ITEM_TAG_HOME);
     }
