@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+
 import com.example.almig.android.view.ProgressWheel;
 import com.example.almig.android.view.kbv.KenBurnsView;
 
@@ -55,6 +56,11 @@ public class LoadingActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
     }
 
     @Override

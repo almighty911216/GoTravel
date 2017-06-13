@@ -58,7 +58,7 @@
                 android:layout_marginRight="32dp"
                 android:paddingBottom="10dp"
                 android:paddingTop="10dp"
-                android:text="Choose your location"
+                android:text="이 장소와 관련된 사진은??"
                 android:textColor="@color/main_color_grey_400"
                 android:textSize="14sp"
                 app:typeface="robotoRegular" />

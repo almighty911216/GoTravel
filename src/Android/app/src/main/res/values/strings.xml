@@ -74,6 +74,9 @@
     <!-- For Update -->
     <string name="confirm_exit">Press Back button again to exit</string>
 
+    <string name="geofences_added">Geofences added</string>
+    <string name="geofences_removed">Geofences removed</string>
+
     <!-- Error strings -->
     <string name="geofence_not_available">Geofence service is not available now</string>
     <string name="geofence_too_many_geofences">Your app has registered too many geofences</string>

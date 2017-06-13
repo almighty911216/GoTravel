@@ -6,4 +6,13 @@
     android:layout_height="?android:attr/actionBarSize"
     android:background="@color/custom_toolbar_color"
     app:popupTheme="@style/Theme.AppCompat.Light.DarkActionBar"
-    app:theme="@style/AppTheme.Title" />
+    app:theme="@style/AppTheme.Title" >
+
+<!--    <TextView
+        android:id="@+id/tb_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="18dp"
+        android:text="test"
+        android:textSize="25sp"/>-->
+    </android.support.v7.widget.Toolbar>

@@ -26,7 +26,7 @@ import com.google.android.gms.location.GeofenceStatusCodes;
 /**
  * Geofence error codes mapped to error messages.
  */
-class GeofenceErrorMessages {
+public class GeofenceErrorMessages {
     /**
      * Prevents instantiation.
      */

@@ -2,8 +2,9 @@ package com.example.almig.android.fragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.TypedValue;
+import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AlphaAnimation;
@@ -56,123 +57,57 @@ public class PathfindingFragment extends Fragment {
         anim.setRepeatCount(Animation.INFINITE);
         imageView.startAnimation(anim);
 
-        layout.setOnClickListener(new View.OnClickListener() {
-            AbsoluteLayout.LayoutParams absParams =
-                    (AbsoluteLayout.LayoutParams) imageView.getLayoutParams();
+        imageView.setOnTouchListener(new View.OnTouchListener() {
+            float oldXvalue;
+            float oldYvalue;
 
             @Override
-            public void onClick(View v) {
-                switch (++flag) {
-                    case 1:
-                        absParams.x = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
-                                113, getResources().getDisplayMetrics());
-                        absParams.y = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
-                                71, getResources().getDisplayMetrics());
-                        break;
-                    case 2:
-                        absParams.x = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
-                                208, getResources().getDisplayMetrics());
-                        absParams.y = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
-                                80, getResources().getDisplayMetrics());
-                        break;
-                    case 3:
-                        absParams.x = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
-                                260, getResources().getDisplayMetrics());
-                        absParams.y = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
-                                110, getResources().getDisplayMetrics());
-                        break;
-                    case 4:
-                        absParams.x = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
-                                208, getResources().getDisplayMetrics());
-                        absParams.y = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
-                                143, getResources().getDisplayMetrics());
-                        break;
-                    case 5:
-                        absParams.x = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
-                                158, getResources().getDisplayMetrics());
-                        absParams.y = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
-                                148, getResources().getDisplayMetrics());
-                        break;
-                    case 6:
-                        absParams.x = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
-                                60, getResources().getDisplayMetrics());
-                        absParams.y = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
-                                165, getResources().getDisplayMetrics());
-                        break;
-                    case 7:
-                        absParams.x = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
-                                40, getResources().getDisplayMetrics());
-                        absParams.y = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
-                                281, getResources().getDisplayMetrics());
-                        break;
-                    case 8:
-                        absParams.x = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
-                                124, getResources().getDisplayMetrics());
-                        absParams.y = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
-                                306, getResources().getDisplayMetrics());
-                        break;
-                    case 9:
-                        absParams.x = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
-                                220, getResources().getDisplayMetrics());
-                        absParams.y = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
-                                308, getResources().getDisplayMetrics());
-                        break;
-                    case 10:
-                        absParams.x = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
-                                323, getResources().getDisplayMetrics());
-                        absParams.y = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
-                                352, getResources().getDisplayMetrics());
-                        break;
-                    case 11:
-                        absParams.x = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
-                                270, getResources().getDisplayMetrics());
-                        absParams.y = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
-                                393, getResources().getDisplayMetrics());
-                        break;
-                    case 12:
-                        absParams.x = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
-                                209, getResources().getDisplayMetrics());
-                        absParams.y = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
-                                409, getResources().getDisplayMetrics());
-                        break;
-                    case 13:
-                        absParams.x = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
-                                144, getResources().getDisplayMetrics());
-                        absParams.y = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
-                                418, getResources().getDisplayMetrics());
-                        break;
-                    case 14:
-                        absParams.x = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
-                                60, getResources().getDisplayMetrics());
-                        absParams.y = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
-                                499, getResources().getDisplayMetrics());
-                        break;
-                    case 15:
-                        absParams.x = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
-                                76, getResources().getDisplayMetrics());
-                        absParams.y = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
-                                521, getResources().getDisplayMetrics());
-                        break;
-                    case 16:
-                        absParams.x = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
-                                119, getResources().getDisplayMetrics());
-                        absParams.y = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
-                                540, getResources().getDisplayMetrics());
-                        break;
-                    case 17:
-                        absParams.x = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
-                                225, getResources().getDisplayMetrics());
-                        absParams.y = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
-                                553, getResources().getDisplayMetrics());
-                        break;
-                    case 18:
-                        absParams.x = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
-                                323, getResources().getDisplayMetrics());
-                        absParams.y = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
-                                547, getResources().getDisplayMetrics());
-                        break;
+            public boolean onTouch(View v, MotionEvent event) {
+                int width = ((ViewGroup) v.getParent()).getWidth() - v.getWidth();
+                int height = ((ViewGroup) v.getParent()).getHeight() - v.getHeight();
+
+                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    oldXvalue = event.getX();
+                    oldYvalue = event.getY();
+                    //  Log.i("Tag1", "Action Down X" + event.getX() + "," + event.getY());
+                    Log.i("Tag1", "Action Down rX " + event.getRawX() + "," + event.getRawY());
+                } else if (event.getAction() == MotionEvent.ACTION_MOVE) {
+                    v.setX(event.getRawX() - oldXvalue);
+                    v.setY(event.getRawY() - (oldYvalue + v.getHeight()));
+                    //  Log.i("Tag2", "Action Down " + me.getRawX() + "," + me.getRawY());
+                } else if (event.getAction() == MotionEvent.ACTION_UP) {
+
+                    if (v.getX() > width && v.getY() > height) {
+                        v.setX(width);
+                        v.setY(height);
+                    } else if (v.getX() < 0 && v.getY() > height) {
+                        v.setX(0);
+                        v.setY(height);
+                    } else if (v.getX() > width && v.getY() < 0) {
+                        v.setX(width);
+                        v.setY(0);
+                    } else if (v.getX() < 0 && v.getY() < 0) {
+                        v.setX(0);
+                        v.setY(0);
+                    } else if (v.getX() < 0 || v.getX() > width) {
+                        if (v.getX() < 0) {
+                            v.setX(0);
+                            v.setY(event.getRawY() - oldYvalue - v.getHeight());
+                        } else {
+                            v.setX(width);
+                            v.setY(event.getRawY() - oldYvalue - v.getHeight());
+                        }
+                    } else if (v.getY() < 0 || v.getY() > height) {
+                        if (v.getY() < 0) {
+                            v.setX(event.getRawX() - oldXvalue);
+                            v.setY(0);
+                        } else {
+                            v.setX(event.getRawX() - oldXvalue);
+                            v.setY(height);
+                        }
+                    }
                 }
-                imageView.setLayoutParams(absParams);
+                return true;
             }
         });
 

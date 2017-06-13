@@ -1,11 +1,13 @@
 package com.example.almig.android.fragment;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.example.almig.android.R;
 import com.example.imagesliding.Animations.DescriptionAnimation;
@@ -20,6 +22,7 @@ import java.util.HashMap;
 public class HomeFragment extends Fragment implements BaseSliderView.OnSliderClickListener, ViewPagerEx.OnPageChangeListener {
     private View mRootView;
     private SliderLayout mSlider;
+    private TextView mTvMap;
 
     public static HomeFragment newInstance() {
         return new HomeFragment();
@@ -28,6 +31,8 @@ public class HomeFragment extends Fragment implements BaseSliderView.OnSliderCli
     private void initBinding(View rootView) {
         mRootView = rootView;
         mSlider = (SliderLayout)rootView.findViewById(R.id.slider_adv);
+        mTvMap = (TextView)rootView.findViewById(R.id.tv_home_map);
+        mTvMap.setTypeface(Typeface.createFromAsset(mRootView.getContext().getAssets(), "fonts/custom2.ttf"));
     }
 
     private void initSlider() {

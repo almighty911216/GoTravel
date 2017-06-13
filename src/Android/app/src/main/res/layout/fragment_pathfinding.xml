@@ -16,15 +16,6 @@
         android:scaleType="fitXY"
         android:src="@drawable/marker_tmp" />
 
-    <ImageView
-        android:id="@+id/iv_marker2"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_x="40dp"
-        android:layout_y="215dp"
-        android:scaleType="fitXY"
-        android:src="@drawable/marker_tmp" />
-
 </AbsoluteLayout>
     <!--
     <?xml version="1.0" encoding="utf-8"?>
