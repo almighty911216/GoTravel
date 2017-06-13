@@ -108,12 +108,12 @@ public class CulturalAssetCategoryAdapter extends BaseAdapter implements View.On
 				convertView = mInflater.inflate(R.layout.list_item_categories_two_columns, parent, false);
 				twoColumnsViewHolder = new ViewHolder.TwoColumnsViewHolder();
 				twoColumnsViewHolder.mLhsImage = (ImageView) convertView.findViewById(R.id.iv_lhs_item_image);
-				twoColumnsViewHolder.mLhsComplete = (TextView) convertView.findViewById(R.id.mditv_lhs_item_complete);
+				twoColumnsViewHolder.mLhsComplete = (ImageView) convertView.findViewById(R.id.iv_lhs_item_complete);
 				twoColumnsViewHolder.mLhsTitle = (TextView) convertView.findViewById(R.id.tv_lhs_item_title);
 				twoColumnsViewHolder.mLhsNumberOfCulturalAsset = (TextView) convertView.findViewById(R.id.tv_lhs_item_number_of_cultural_asset);
 				twoColumnsViewHolder.mLhsLayoutTopBottom = (ViewGroup) convertView.findViewById(R.id.ll_lhs_top_bottom);
 				twoColumnsViewHolder.mRhsImage = (ImageView) convertView.findViewById(R.id.iv_rhs_item_image);
-				twoColumnsViewHolder.mRhsComplete = (TextView) convertView.findViewById(R.id.mditv_rhs_item_complete);
+				twoColumnsViewHolder.mRhsComplete = (ImageView) convertView.findViewById(R.id.iv_rhs_item_complete);
 				twoColumnsViewHolder.mRhsTitle = (TextView) convertView.findViewById(R.id.tv_rhs_item_title);
 				twoColumnsViewHolder.mRhsNumberOfCulturalAsset = (TextView) convertView.findViewById(R.id.tv_rhs_item_number_of_cultural_asset);
 				twoColumnsViewHolder.mRhsLayoutTopBottom = (ViewGroup) convertView.findViewById(R.id.ll_rhs_top_bottom);
@@ -129,9 +129,9 @@ public class CulturalAssetCategoryAdapter extends BaseAdapter implements View.On
 			twoColumnsViewHolder.mLhsTitle.setText(lhsModel.getTitleId());
 			twoColumnsViewHolder.mLhsImage.setImageResource(lhsModel.getLogoId());
 			if (lhsModel.isVisit()) {
-				twoColumnsViewHolder.mLhsComplete.setText(R.string.fontello_star_full);
+				twoColumnsViewHolder.mLhsComplete.setImageResource(R.drawable.ic_auth);
 			} else {
-				twoColumnsViewHolder.mLhsComplete.setText(R.string.fontello_star_empty);
+				twoColumnsViewHolder.mLhsComplete.setImageResource(R.drawable.ic_new);
 			}
 
 			CulturalAssetCategoryModel rhsModel = mCulturalAssetCategoryModels.get(position * 2 + 1);
@@ -139,9 +139,9 @@ public class CulturalAssetCategoryAdapter extends BaseAdapter implements View.On
 			twoColumnsViewHolder.mRhsTitle.setText(rhsModel.getTitleId());
 			twoColumnsViewHolder.mRhsImage.setImageResource(rhsModel.getLogoId());
 			if (rhsModel.isVisit()) {
-				twoColumnsViewHolder.mRhsComplete.setText(R.string.fontello_star_full);
+				twoColumnsViewHolder.mRhsComplete.setImageResource(R.drawable.ic_auth);
 			} else {
-				twoColumnsViewHolder.mRhsComplete.setText(R.string.fontello_star_empty);
+				twoColumnsViewHolder.mRhsComplete.setImageResource(R.drawable.ic_new);
 			}
 			twoColumnsViewHolder.mLhsImage.setTag(position * 2);
 			twoColumnsViewHolder.mRhsImage.setTag(position * 2 + 1);
@@ -179,13 +179,13 @@ public class CulturalAssetCategoryAdapter extends BaseAdapter implements View.On
 
 		private static class TwoColumnsViewHolder {
 			public ImageView mLhsImage;
-			public /*Fontello*/TextView mLhsComplete;
+			public ImageView mLhsComplete;
 			public TextView mLhsTitle;
 			public TextView mLhsNumberOfCulturalAsset;
 			public ViewGroup mLhsLayoutTopBottom;
 
 			public ImageView mRhsImage;
-			public /*Fontello*/TextView mRhsComplete;
+			public ImageView mRhsComplete;
 			public TextView mRhsTitle;
 			public TextView mRhsNumberOfCulturalAsset;
 			public ViewGroup mRhsLayoutTopBottom;

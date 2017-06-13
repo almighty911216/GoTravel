@@ -10,6 +10,7 @@ public class DrawerItem {
 	public static final int DRAWER_ITEM_TAG_CULTURAL_ASSETS = 3;
 	public static final int DRAWER_ITEM_TAG_SEARCH = 4;
 	public static final int DRAWER_ITEM_TAG_FOOTPRINT = 5;
+	public static final int DRAWER_ITEM_TAG_STAMP_AUTH = 6;
 	
 	public DrawerItem(Drawable icon, int title, int tag) {
 		this.icon = icon;

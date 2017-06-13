@@ -25,6 +25,7 @@ import com.example.almig.android.fragment.FootprintFragment;
 import com.example.almig.android.fragment.HomeFragment;
 import com.example.almig.android.fragment.PathfindingFragment;
 import com.example.almig.android.fragment.SearchFragment;
+import com.example.almig.android.fragment.StampAuthFragment;
 import com.example.almig.android.model.DrawerItem;
 import com.example.almig.android.util.ImageUtil;
 import com.nostra13.universalimageloader.core.ImageLoader;
@@ -74,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
         mDrawerItems.add(new DrawerItem(mRes.getDrawable(R.drawable.ic_book), R.string.activity_title_cultural_assets, DrawerItem.DRAWER_ITEM_TAG_CULTURAL_ASSETS));
         mDrawerItems.add(new DrawerItem(mRes.getDrawable(R.drawable.ic_search), R.string.activity_title_search, DrawerItem.DRAWER_ITEM_TAG_SEARCH));
         mDrawerItems.add(new DrawerItem(mRes.getDrawable(R.drawable.ic_footprint), R.string.activity_title_footprint, DrawerItem.DRAWER_ITEM_TAG_FOOTPRINT));
+        mDrawerItems.add(new DrawerItem(mRes.getDrawable(R.drawable.ic_stamp), R.string.activity_title_stamp_auth, DrawerItem.DRAWER_ITEM_TAG_STAMP_AUTH));
     }
 
     private void initToolbar() {
@@ -160,6 +162,10 @@ public class MainActivity extends AppCompatActivity {
 
             case DrawerItem.DRAWER_ITEM_TAG_FOOTPRINT:
                 fragment = FootprintFragment.newInstance();
+                break;
+
+            case DrawerItem.DRAWER_ITEM_TAG_STAMP_AUTH:
+                fragment = StampAuthFragment.newInstance();
                 break;
 
             default:

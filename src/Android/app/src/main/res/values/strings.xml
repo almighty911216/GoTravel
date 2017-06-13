@@ -6,6 +6,7 @@
     <string name="activity_title_cultural_assets">문화재 도감</string>
     <string name="activity_title_search">문화재 찾기</string>
     <string name="activity_title_footprint">발자취</string>
+    <string name="activity_title_stamp_auth">도장 찍기</string>
 
     <string name="state_seoul">서울</string>
     <string name="state_busan">부산</string>
@@ -36,6 +37,8 @@
     <string name="gyeongju_cultural_asset_name_royal_tomb_of_queen_sundeok">선덕여왕릉</string>
     <string name="gyeongju_cultural_asset_name_sukgulam">석굴암</string>
 
+    <!-- 퀴즈 -->
+
     <string name="write_footprint_title">발자취 제목</string>
     <string name="write_footprint_comment">한줄평</string>
     <string name="date">날짜</string>
@@ -47,6 +50,11 @@
     <string name="album">앨범</string>
     <string name="save">저장</string>
     <string name="reset">초기화</string>
+    <string name="cancel">CANCEL</string>
+    <string name="ok">OK</string>
+
+    <string name="material_icon_go_left">&#xe875;</string>
+    <string name="material_icon_go_right">&#xe876;</string>
 
     <string name="number_of_cultural_asset">%d 문화재 수</string>
     <string name="fontello_star_empty">&#xe800;</string>
@@ -65,4 +73,5 @@
 
     <!-- For Update -->
     <string name="confirm_exit">Press Back button again to exit</string>
+
 </resources>

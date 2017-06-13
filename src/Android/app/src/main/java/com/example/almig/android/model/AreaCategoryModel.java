@@ -24,7 +24,7 @@ public class AreaCategoryModel implements Parcelable {
         mLogoId = in.readInt();
         mTitleId = in.readInt();
         if (in.readByte() == 0x01) {
-            mSubcategories = new ArrayList<CulturalAssetCategoryModel>();
+            mSubcategories = new ArrayList<>();
             in.readList(mSubcategories, CulturalAssetCategoryModel.class.getClassLoader());
         } else {
             mSubcategories = null;
@@ -60,8 +60,7 @@ public class AreaCategoryModel implements Parcelable {
         return mSubcategories;
     }
 
-    public void setSubcategories(
-            ArrayList<CulturalAssetCategoryModel> subcategories) {
+    public void setSubcategories(ArrayList<CulturalAssetCategoryModel> subcategories) {
         mSubcategories = subcategories;
     }
 

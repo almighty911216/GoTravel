@@ -111,12 +111,12 @@ public class AreaCategoryAdapter extends BaseAdapter implements OnClickListener 
 				convertView = mInflater.inflate(R.layout.list_item_categories_two_columns, parent, false);
 				twoColumnsViewHolder = new ViewHolder.TwoColumnsViewHolder();
 				twoColumnsViewHolder.mLhsImage = (ImageView) convertView.findViewById(R.id.iv_lhs_item_image);
-				twoColumnsViewHolder.mLhsComplete = (TextView) convertView.findViewById(R.id.mditv_lhs_item_complete);
+				twoColumnsViewHolder.mLhsComplete = (ImageView) convertView.findViewById(R.id.iv_lhs_item_complete);
 				twoColumnsViewHolder.mLhsTitle = (TextView) convertView.findViewById(R.id.tv_lhs_item_title);
 				twoColumnsViewHolder.mLhsNumberOfCulturalAsset = (TextView) convertView.findViewById(R.id.tv_lhs_item_number_of_cultural_asset);
 				twoColumnsViewHolder.mLhsLayoutTopBottom = (ViewGroup) convertView.findViewById(R.id.ll_lhs_top_bottom);
 				twoColumnsViewHolder.mRhsImage = (ImageView) convertView.findViewById(R.id.iv_rhs_item_image);
-				twoColumnsViewHolder.mRhsComplete = (TextView) convertView.findViewById(R.id.mditv_rhs_item_complete);
+				twoColumnsViewHolder.mRhsComplete = (ImageView) convertView.findViewById(R.id.iv_rhs_item_complete);
 				twoColumnsViewHolder.mRhsTitle = (TextView) convertView.findViewById(R.id.tv_rhs_item_title);
 				twoColumnsViewHolder.mRhsNumberOfCulturalAsset = (TextView) convertView.findViewById(R.id.tv_rhs_item_number_of_cultural_asset);
 				twoColumnsViewHolder.mRhsLayoutTopBottom = (ViewGroup) convertView.findViewById(R.id.ll_rhs_top_bottom);
@@ -130,30 +130,70 @@ public class AreaCategoryAdapter extends BaseAdapter implements OnClickListener 
 
 			AreaCategoryModel lhsModel = mAreaCategoryModels.get(position * 2);
 			twoColumnsViewHolder.mLhsTitle.setText(lhsModel.getTitleId());
-			twoColumnsViewHolder.mLhsNumberOfCulturalAsset.setText(mContext.getString(R.string.number_of_cultural_asset, lhsModel.getSubcategories().size()));
+			//twoColumnsViewHolder.mLhsNumberOfCulturalAsset.setText(mContext.getString(R.string.number_of_cultural_asset, lhsModel.getSubcategories().size()));
 			twoColumnsViewHolder.mLhsImage.setImageResource(lhsModel.getLogoId());
 			if (lhsModel.isComplete()) {
-				twoColumnsViewHolder.mLhsComplete.setText(R.string.fontello_star_full);
+				twoColumnsViewHolder.mLhsComplete.setImageResource(R.drawable.ic_medal);
 			} else {
-				twoColumnsViewHolder.mLhsComplete.setText(R.string.fontello_star_empty);
+				twoColumnsViewHolder.mLhsComplete.setImageResource(R.drawable.ic_new);
+			}
+
+			// 더미데이터
+			switch (position * 2) {
+				case 0:
+					twoColumnsViewHolder.mLhsNumberOfCulturalAsset.setText("문화재 수 : 1731");
+					break;
+
+				case 2:
+					twoColumnsViewHolder.mLhsNumberOfCulturalAsset.setText("문화재 수 : 144");
+					break;
+
+				case 4:
+					twoColumnsViewHolder.mLhsNumberOfCulturalAsset.setText("문화재 수 : 410");
+					break;
+
+				case 6:
+					twoColumnsViewHolder.mLhsNumberOfCulturalAsset.setText("문화재 수 : 142");
+					break;
 			}
 
 			AreaCategoryModel rhsModel = mAreaCategoryModels.get(position * 2 + 1);
 
 			twoColumnsViewHolder.mRhsTitle.setText(rhsModel.getTitleId());
-			twoColumnsViewHolder.mRhsNumberOfCulturalAsset.setText(mContext.getString(R.string.number_of_cultural_asset, rhsModel.getSubcategories().size()));
+			//woColumnsViewHolder.mRhsNumberOfCulturalAsset.setText(mContext.getString(R.string.number_of_cultural_asset, rhsModel.getSubcategories().size()));
 			twoColumnsViewHolder.mRhsImage.setImageResource(rhsModel.getLogoId());
 			if (rhsModel.isComplete()) {
-				twoColumnsViewHolder.mRhsComplete.setText(R.string.fontello_star_full);
+				twoColumnsViewHolder.mRhsComplete.setImageResource(R.drawable.ic_medal);
 			} else {
-				twoColumnsViewHolder.mRhsComplete.setText(R.string.fontello_star_empty);
+				twoColumnsViewHolder.mRhsComplete.setImageResource(R.drawable.ic_new);
 			}
+
+			// 더미데이터
+			switch (position * 2 + 1) {
+				case 1:
+					twoColumnsViewHolder.mRhsNumberOfCulturalAsset.setText("문화재 수 : 261");
+					break;
+
+				case 3:
+					twoColumnsViewHolder.mRhsNumberOfCulturalAsset.setText("문화재 수 : 264");
+					break;
+
+				case 5:
+					twoColumnsViewHolder.mRhsNumberOfCulturalAsset.setText("문화재 수 : 326");
+					break;
+
+				case 7:
+					twoColumnsViewHolder.mRhsNumberOfCulturalAsset.setText("문화재 수 : 379");
+					break;
+			}
+
 			twoColumnsViewHolder.mLhsImage.setTag(position * 2);
 			twoColumnsViewHolder.mRhsImage.setTag(position * 2 + 1);
 			twoColumnsViewHolder.mLhsComplete.setTag(position * 2);
 			twoColumnsViewHolder.mRhsComplete.setTag(position * 2 + 1);
 			LayoutParams lp1 = (LayoutParams) twoColumnsViewHolder.mLhsLayoutTopBottom.getLayoutParams();
 			LayoutParams lp2 = (LayoutParams) twoColumnsViewHolder.mRhsLayoutTopBottom.getLayoutParams();
+
 			if (!mIsLayoutOnTop) {
 				lp1.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM, RelativeLayout.TRUE);
 				lp2.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM, RelativeLayout.TRUE);
@@ -177,13 +217,13 @@ public class AreaCategoryAdapter extends BaseAdapter implements OnClickListener 
 		
 		private static class TwoColumnsViewHolder {
 			public ImageView mLhsImage;
-			public /*Fontello*/TextView mLhsComplete;
+			public ImageView mLhsComplete;
 			public TextView mLhsTitle;
 			public TextView mLhsNumberOfCulturalAsset;
 			public ViewGroup mLhsLayoutTopBottom;
 
 			public ImageView mRhsImage;
-			public /*Fontello*/TextView mRhsComplete;
+			public ImageView mRhsComplete;
 			public TextView mRhsTitle;
 			public TextView mRhsNumberOfCulturalAsset;
 			public ViewGroup mRhsLayoutTopBottom;

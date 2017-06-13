@@ -61,15 +61,13 @@
                         android:textColor="#fff" />
                 </LinearLayout>
 
-                <com.example.almig.android.font.MaterialDesignIconsTextView
-                    android:id="@+id/mditv_lhs_item_complete"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <ImageView
+                    android:id="@+id/iv_lhs_item_complete"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:layout_marginLeft="4dp"
-                    android:padding="8dp"
-                    android:textColor="#fff"
-                    android:textSize="24dp"
-                    tools:ignore="SpUsage" />
+                    android:src="@drawable/default_image"
+                    android:scaleType="fitXY"/>
             </LinearLayout>
         </RelativeLayout>
 
@@ -126,15 +124,13 @@
                         android:textColor="#fff" />
                 </LinearLayout>
 
-                <com.example.almig.android.font.MaterialDesignIconsTextView
-                    android:id="@+id/mditv_rhs_item_complete"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <ImageView
+                    android:id="@+id/iv_rhs_item_complete"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:layout_marginLeft="4dp"
-                    android:padding="8dp"
-                    android:textColor="#fff"
-                    android:textSize="24dp"
-                    tools:ignore="SpUsage" />
+                    android:src="@drawable/default_image"
+                    android:scaleType="fitXY"/>
             </LinearLayout>
         </RelativeLayout>
     </com.example.almig.android.view.ScaledLinearLayout>

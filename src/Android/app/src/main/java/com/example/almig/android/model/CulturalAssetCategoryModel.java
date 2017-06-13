@@ -20,6 +20,12 @@ public class CulturalAssetCategoryModel implements Parcelable {
         mId = in.readLong();
         mLogoId = in.readInt();
         mTitleId = in.readInt();
+        if(in.readByte() == 0x01) {
+            mVisit = true;
+        }
+        else {
+            mVisit = false;
+        }
     }
 
     public long getId() {
@@ -66,6 +72,7 @@ public class CulturalAssetCategoryModel implements Parcelable {
         dest.writeLong(mId);
         dest.writeInt(mLogoId);
         dest.writeInt(mTitleId);
+        dest.writeByte((byte) (mVisit ? 0x01 : 0x00));
     }
 
     public static final Creator<CulturalAssetCategoryModel> CREATOR = new Creator<CulturalAssetCategoryModel>() {

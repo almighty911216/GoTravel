@@ -18,7 +18,7 @@ public class DummyContent {
 		areaCategoryModel.setId(0L);
 		areaCategoryModel.setLogoId(R.drawable.logo_seoul);
 		areaCategoryModel.setTitleId(R.string.state_seoul);
-		areaCategoryModel.setComplete(false);
+		areaCategoryModel.setComplete(true);
 		areaCategoryModel.setSubcategories(getSeoulCulturalAssetsCategoryModels());
 		areaCategoryModels.add(areaCategoryModel);
 
@@ -50,7 +50,7 @@ public class DummyContent {
 		areaCategoryModel.setId(4L);
 		areaCategoryModel.setLogoId(R.drawable.logo_busan);
 		areaCategoryModel.setTitleId(R.string.state_busan);
-		areaCategoryModel.setComplete(false);
+		areaCategoryModel.setComplete(true);
 		areaCategoryModel.setSubcategories(getSeoulCulturalAssetsCategoryModels());
 		areaCategoryModels.add(areaCategoryModel);
 
@@ -74,7 +74,7 @@ public class DummyContent {
 		areaCategoryModel.setId(7L);
 		areaCategoryModel.setLogoId(R.drawable.logo_jeju);
 		areaCategoryModel.setTitleId(R.string.state_jeju);
-		areaCategoryModel.setComplete(false);
+		areaCategoryModel.setComplete(true);
 		areaCategoryModel.setSubcategories(getSeoulCulturalAssetsCategoryModels());
 		areaCategoryModels.add(areaCategoryModel);
 

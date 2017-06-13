@@ -100,14 +100,14 @@ public class DummyCulturalAssetCategoryContent {
         culturalAssetCategoryModel.setId(3L);
         culturalAssetCategoryModel.setTitleId(R.string.gyeongju_cultural_asset_name_hwangryongsaji);
         culturalAssetCategoryModel.setLogoId(R.drawable.hwangryongsaji);
-        culturalAssetCategoryModel.setVisit(false);
+        culturalAssetCategoryModel.setVisit(true);
         culturalAssetCategoryModels.add(culturalAssetCategoryModel);
 
         culturalAssetCategoryModel = new CulturalAssetCategoryModel();
         culturalAssetCategoryModel.setId(4L);
         culturalAssetCategoryModel.setTitleId(R.string.gyeongju_cultural_asset_name_imhae_jeonji);
         culturalAssetCategoryModel.setLogoId(R.drawable.imhae_jeonji);
-        culturalAssetCategoryModel.setVisit(false);
+        culturalAssetCategoryModel.setVisit(true);
         culturalAssetCategoryModels.add(culturalAssetCategoryModel);
 
         culturalAssetCategoryModel = new CulturalAssetCategoryModel();
@@ -121,7 +121,7 @@ public class DummyCulturalAssetCategoryContent {
         culturalAssetCategoryModel.setId(6L);
         culturalAssetCategoryModel.setTitleId(R.string.gyeongju_cultural_asset_name_royal_tomb_of_queen_sundeok);
         culturalAssetCategoryModel.setLogoId(R.drawable.royal_tomb_of_queen_sundeok);
-        culturalAssetCategoryModel.setVisit(false);
+        culturalAssetCategoryModel.setVisit(true);
         culturalAssetCategoryModels.add(culturalAssetCategoryModel);
 
         culturalAssetCategoryModel = new CulturalAssetCategoryModel();
