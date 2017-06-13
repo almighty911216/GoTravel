@@ -65,43 +65,43 @@ public class PathfindingFragment extends Fragment {
                 switch (++flag) {
                     case 1:
                         absParams.x = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
-                                143, getResources().getDisplayMetrics());
+                                113, getResources().getDisplayMetrics());
                         absParams.y = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
-                                109, getResources().getDisplayMetrics());
+                                71, getResources().getDisplayMetrics());
                         break;
                     case 2:
                         absParams.x = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
-                                206, getResources().getDisplayMetrics());
+                                208, getResources().getDisplayMetrics());
                         absParams.y = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
-                                108, getResources().getDisplayMetrics());
+                                80, getResources().getDisplayMetrics());
                         break;
                     case 3:
                         absParams.x = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
-                                303, getResources().getDisplayMetrics());
+                                260, getResources().getDisplayMetrics());
                         absParams.y = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
-                                151, getResources().getDisplayMetrics());
+                                110, getResources().getDisplayMetrics());
                         break;
                     case 4:
                         absParams.x = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
-                                249, getResources().getDisplayMetrics());
+                                208, getResources().getDisplayMetrics());
                         absParams.y = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
-                                186, getResources().getDisplayMetrics());
+                                143, getResources().getDisplayMetrics());
                         break;
                     case 5:
                         absParams.x = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
-                                191, getResources().getDisplayMetrics());
+                                158, getResources().getDisplayMetrics());
                         absParams.y = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
-                                197, getResources().getDisplayMetrics());
+                                148, getResources().getDisplayMetrics());
                         break;
                     case 6:
                         absParams.x = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
-                                110, getResources().getDisplayMetrics());
+                                60, getResources().getDisplayMetrics());
                         absParams.y = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
-                                210, getResources().getDisplayMetrics());
+                                165, getResources().getDisplayMetrics());
                         break;
                     case 7:
                         absParams.x = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
-                                67, getResources().getDisplayMetrics());
+                                40, getResources().getDisplayMetrics());
                         absParams.y = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
                                 281, getResources().getDisplayMetrics());
                         break;

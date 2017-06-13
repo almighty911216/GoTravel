@@ -11,9 +11,18 @@
         android:id="@+id/iv_marker"
         android:layout_width="50dp"
         android:layout_height="50dp"
+        android:layout_x="41dp"
+        android:layout_y="76dp"
         android:scaleType="fitXY"
-        android:layout_x="69dp"
-        android:layout_y="113dp"
+        android:src="@drawable/marker_tmp" />
+
+    <ImageView
+        android:id="@+id/iv_marker2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_x="40dp"
+        android:layout_y="215dp"
+        android:scaleType="fitXY"
         android:src="@drawable/marker_tmp" />
 
 </AbsoluteLayout>
