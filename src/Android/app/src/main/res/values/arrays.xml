@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sort_method">
+        <item>시간순</item>
+        <item>글자순</item>
+    </string-array>
+
+    <string-array name="sort_visit">
+        <item>모두</item>
+        <item>방문완료</item>
+        <item>방문예정</item>
+    </string-array>
+</resources>

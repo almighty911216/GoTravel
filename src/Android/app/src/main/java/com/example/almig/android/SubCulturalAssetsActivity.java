@@ -2,8 +2,11 @@ package com.example.almig.android;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
+import android.widget.Spinner;
 
 import com.example.almig.android.adapter.CulturalAssetCategoryAdapter;
 import com.example.almig.android.model.CulturalAssetCategoryModel;
@@ -17,10 +20,12 @@ public class SubCulturalAssetsActivity extends AppCompatActivity {
     private ArrayList<CulturalAssetCategoryModel> mSubcategories;
 
     private ListView mLvCollect;
+    private Spinner mSpinnerSort;
     private boolean mIsLayoutOnTop;
 
     private void initBinding() {
         mLvCollect = (ListView)findViewById(R.id.lv_cultural_assets);
+        mSpinnerSort = (Spinner)findViewById(R.id.spinner_cultural_asset_sort);
     }
 
     private void initAdapter() {
@@ -38,6 +43,18 @@ public class SubCulturalAssetsActivity extends AppCompatActivity {
 
         BaseAdapter adapter = new CulturalAssetCategoryAdapter(this, mSubcategories, mIsLayoutOnTop);
         mLvCollect.setAdapter(adapter);
+
+        mSpinnerSort.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
     }
 
     @Override

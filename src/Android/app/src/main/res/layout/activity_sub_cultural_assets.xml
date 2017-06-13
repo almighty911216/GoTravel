@@ -1,14 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.example.almig.android.SubCulturalAssetsActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/spinner_cultural_asset_sort"
+            android:layout_width="130dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="10dp"
+            android:entries="@array/sort_method">
+        </Spinner>
+
+        <Spinner
+            android:id="@+id/spinner_cultural_asset_sort_visit"
+            android:layout_width="130dp"
+            android:layout_height="50dp"
+            android:entries="@array/sort_visit">
+        </Spinner>
+    </LinearLayout>
+
 
     <ListView
         android:id="@+id/lv_cultural_assets"
         style="@style/ListViewStyle" />
 
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>
