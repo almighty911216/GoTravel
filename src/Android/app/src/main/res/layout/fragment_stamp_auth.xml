@@ -9,7 +9,7 @@
         android:id="@+id/iv_auth_picture"
         android:layout_width="300dp"
         android:layout_height="300dp"
-        android:src="@drawable/default_image"
+        android:src="@drawable/auth_chumsungdae"
         android:scaleType="fitXY"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"

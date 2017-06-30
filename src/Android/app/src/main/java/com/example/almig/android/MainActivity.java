@@ -62,14 +62,11 @@ public class MainActivity extends AppCompatActivity implements OnCompleteListene
     static final String GEOFENCES_ADDED_KEY = PACKAGE_NAME + ".GEOFENCES_ADDED_KEY";
     private static final long GEOFENCE_EXPIRATION_IN_HOURS = 12;
     static final long GEOFENCE_EXPIRATION_IN_MILLISECONDS = GEOFENCE_EXPIRATION_IN_HOURS * 60 * 60 * 1000;
-    static final int GEOFENCE_RADIUS_IN_METERS = 20;
+    static final int GEOFENCE_RADIUS_IN_METERS = 50;
     static final HashMap<String, LatLng> BAY_AREA_LANDMARKS = new HashMap<>();
 
     static {
-        BAY_AREA_LANDMARKS.put("6공학관", new LatLng(/*lat*/35.231047, 129.082418));
-        BAY_AREA_LANDMARKS.put("경주터미널", new LatLng(35.8387767, 129.2031508));
-        BAY_AREA_LANDMARKS.put("분황사", new LatLng(35.840586, 129.233702));
-        BAY_AREA_LANDMARKS.put("첨성대", new LatLng(35.834987, 129.219063));
+        BAY_AREA_LANDMARKS.put("첨성대", new LatLng(35.233706, 129.089205));
     }
 
     /**
